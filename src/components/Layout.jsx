@@ -27,7 +27,7 @@ const Layout = () => {
         </div>
       </nav>
       <main className="flex-1 border-2 border-amber-400 p-3">
-        {Outlet}
+        <Outlet />
       </main>
     </div>
   );
