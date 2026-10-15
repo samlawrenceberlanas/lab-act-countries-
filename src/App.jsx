@@ -6,6 +6,8 @@ import CountryDetailPage from "./pages/CountryDetailPage";
 import BucketListPage from "./pages/BucketListPage";
 import AboutPage from "./pages/AboutPage";
 import NotFoundPage from "./pages/NotFoundPage";
+import CountriesLayout from "./components/CountriesLayout";
+
 
 const App = () => {
   return (
@@ -35,6 +37,11 @@ const App = () => {
           path="*"
           element={<NotFoundPage />}
         />
+      </Route>
+
+      <Route path="countries" element={<CountriesLayout />}>
+        <Route index element={<CountriesPage />} />
+        <Route path=":countryCode" element={<CountryDetailPage />} />
       </Route>
     </Routes>
   );
